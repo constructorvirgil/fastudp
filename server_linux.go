@@ -10,8 +10,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/shaoyuan1943/fastudp/netpoll"
-	"github.com/shaoyuan1943/fastudp/netudp"
+	"github.com/constructorvirgil/fastudp/netpoll"
+	"github.com/constructorvirgil/fastudp/netudp"
 )
 
 type Server struct {
