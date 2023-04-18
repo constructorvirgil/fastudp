@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package fastudp
@@ -114,7 +115,7 @@ func (svr *Server) eventLoopClosed(loop *eventLoop, err error) {
 }
 
 // TODO: need load balancing?
-func (svr *Server) WriteTo(data []byte, addr *net.UDPAddr) (int, error) {
+func (svr *Server) WriteTo(addr *net.UDPAddr, data []byte) (int, error) {
 	if svr.closed.Load().(bool) {
 		return 0, fmt.Errorf("server closed")
 	}
